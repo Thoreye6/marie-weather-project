@@ -36,6 +36,7 @@ li {
   font-size: 74px;
   font-weight: 400;
   line-height: 1;
+  margin: 5px 10px;
 }
 .units {
   position: relative;
@@ -46,4 +47,12 @@ li {
 }
 p {
   text-align: center;
+}
+.active {
+  color: #000;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
 }

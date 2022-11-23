@@ -33,6 +33,11 @@ function showWeatherConditions(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/04d@2x.png`
+  );
 }
 
 function searchCity(city) {

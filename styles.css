@@ -30,10 +30,7 @@ li {
   max-width: 720px;
   border-radius: 05px;
 }
-.weather-icon {
-  font-size: 70px;
-  color: #ffe168;
-}
+
 .temperature {
   color: #7fb6e1;
   font-size: 74px;

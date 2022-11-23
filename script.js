@@ -23,6 +23,7 @@ function showDate(date) {
 
 function showWeatherConditions(response) {
   console.log(response.data);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -33,6 +34,12 @@ function showWeatherConditions(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -70,9 +77,6 @@ function getCurrentLocation(event) {
 let dateElement = document.querySelector("#date");
 let nowTime = new Date();
 dateElement.innerHTML = showDate(nowTime);
-
-let iconElement = document.querySelector("#icon");
-iconElement.setAttribute("src", `https://openweathermap.org/img/wn/04d@2x.png`);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);

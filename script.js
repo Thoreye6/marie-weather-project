@@ -33,7 +33,6 @@ function showWeatherConditions(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-
 }
 
 function searchCity(city) {
@@ -72,6 +71,7 @@ let dateElement = document.querySelector("#date");
 let nowTime = new Date();
 dateElement.innerHTML = showDate(nowTime);
 
+let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("src", `https://openweathermap.org/img/wn/04d@2x.png`);
 
 let searchForm = document.querySelector("#search-form");

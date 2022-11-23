@@ -1,6 +1,7 @@
 body {
   font-family: "Quicksand", sans-serif;
 }
+
 h1 {
   color: #006ec5;
   font-size: 15px;
@@ -29,14 +30,24 @@ li {
   margin: 30px auto;
   max-width: 720px;
   border-radius: 05px;
+  background: linear-gradient(
+    111.5deg,
+    rgb(228, 247, 255) 21.9%,
+    rgb(255, 216, 194) 92.2%
+  );
+}
+.icon-flex {
+  align-items: center;
+  display: flex;
 }
 
 .temperature {
   color: #7fb6e1;
   font-size: 74px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1px;
 }
+
 .units {
   position: relative;
   top: -34px;
